@@ -1,6 +1,8 @@
 ### Vim plug is not installing in the correct location
 ??
 
+## Make my own .dotfiles repo
+
 ## Ohmyzsh
 * doesn't work because of the user.
 * also you cannot re-install it or else it breaks.

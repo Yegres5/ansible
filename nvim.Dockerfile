@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 ARG TAGS
 WORKDIR /usr/local/bin
 ARG DEBIAN_FRONTEND=noninteractive
