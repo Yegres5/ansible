@@ -2,7 +2,6 @@
   vars:
     source_key: "./.ssh/id_ed25519"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
-    personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
   - name: Update Apt
     become: true
@@ -15,12 +14,12 @@
       - core
   tasks:
     - include: tasks/ssh.yml
-      #    - include: tasks/git-setup.yml
-      #    - include: tasks/core-setup.yml
-      #    - include: tasks/node-setup.yml
-      #    - include: tasks/npm-packages.yml
-      #    - include: tasks/zsh-setup.yml
-      #    - include: tasks/nvim-setup.yml
-      #    - include: tasks/brave.yml
-      #    - include: tasks/dotfiles.yml
-      #    - include: tasks/productivity-tools.yml
+    - include: tasks/git-setup.yml
+    - include: tasks/core-setup.yml
+    - include: tasks/nvim-setup.yml
+    - include: tasks/node-setup.yml
+    - include: tasks/npm-packages.yml
+    - include: tasks/zsh-setup.yml
+    - include: tasks/brave.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/productivity-tools.yml
